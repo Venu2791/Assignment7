@@ -1,4 +1,4 @@
-# Session 5 – Test Cases and code understanding
+# Session 7 – List comprehension
 ## time_it implementation using *args and **kwargs
 ### def time_it(fn, *args, repetitons= 1, **kwargs): 
 The repetitons indicate the number of times the function has to be calculated.
