@@ -1,13 +1,28 @@
 # Session 7 – List comprehension
-## time_it implementation using *args and **kwargs
-### def time_it(fn, *args, repetitons= 1, **kwargs): 
-The repetitons indicate the number of times the function has to be calculated.
-## It has these functions defined:
-1)  polygon_area : Calculates the area of polygon (sides can be 3 to 6). We have calculated the area of a regular polygon – having all the sides equal. The input is the side length and the number of sides. 
-2)  temp_converter : Converts Celsius to Fahrenheit and Fahrenheit to Celsius. The input is the temperature and the unit of the temperature given.
-3)  print : It prints the value of the input given in args with a specified separator and end.
-4)  squared_power_list : It generates a list by calculating the power of the given number. For example, if 2 is the number we are calculating power of and with start = 0 and end = 5 we get the result as [1, 2, 4, 8, 16, 32].
-5)  speed_converter : It converts the given speed in km/hr to different metrics. Here, distance can be km or m or ft or yrd and time can be ms or s or min or hr or day.
+## Using list comprehension, list filter lambda and reduce functions to solve a set of problems .
+### Q1 :
+To write a function using only list filter lambda that can tell whether a number is a Fibonacci number or not . 
+We have used the list filter lambda function to check the Fibonacci series . We have written the code for Fibonacci number less than 10000 as a list comprehension and checked if a random number generated is a Fibonacci number or not using the list filter lambda function .
+### Q2 : Using list comprehension (and zip/lambda/etc if required) we need to write an expression that does the following : 
+### A) Add two iterables a and b such that a is even and b is odd
+We have considered list comprehension and used zip function to take each element from both the list and added the elements if the element in the first list is even and the second list is odd . 
+### B) Strips every vowel from a string provided ( For example from tsai we need to get t and s )
+We have assigned a list with alphabets of vowels and checked if the vowels are present in our string and striped them . 
+### C) Acts like a ReLU function for a 1D array
+We have a random number list and we print only those numbers which are greater than 0 . 
+### D) Acts like a sigmoid function for a 1D array
+We have a random number list ad we generate the sigmoid function for the numbers present in the list . 
+### E) Takes a small character string and shifts all characters by 5 (handle boundary conditions) 
+We take a list of ascii letters and choose random letters in the range of 3 to 7 and then shift 5 characters to get the desired new list .
+### Q4 : Using reduce function we need to : 
+### A) Add only even numbers in a list
+We check of the number is an even number or not using filter lambda function and from the result generated , we use the reduce function to add the even numbers .
+### B) Find the biggest character in a string ( printable ascii characters )
+We assign the ascii letters to a list . We select random letters in the range 3 to 7 and then compare the letters using reduce function to get the biggest character .
+### C) Adds every 3rd number in a list
+We check the index of the number in the list and if the index is divisible by three, then we add its value using the reduce function . 
+### Q5 : Using randint, random.choice and list comprehensions we need to write an expression that generates 15 random KADDAADDDD number plates, where KA is fixed , D stands for a digit , and A stands for Capital alphabets. 10<<DD<<99 & 1000<<DDDD<<9999 
+We have generated 15 random number plates satisfying the conditions above . 
 ## Test Cases
 1)  README exists
 2)  README has at least 500 words
@@ -15,35 +30,3 @@ The repetitons indicate the number of times the function has to be calculated.
 4)  README file formatting 
 5)  Code Indentation and spaces
 6)  Function name should be in small letters
-7)  All the above 5 functions used
-8)  Repetitions in time_it function should be greater than or equal to 1
-9)  fn in time_it should be any of the 5 functions used above 
-10) polygon_area must have one positional argument
-11) temp_converter must have one positional argument
-12) speed_converter must have one positional argument
-13) squared_power_list must have one positional argument
-14) polygon_area must have one named argument
-15) temp_converter must have one named argument
-16) speed_converter must have two named arguments
-17) squared_power_list must have two named arguments
-18) polygon_area must have sides as named argument
-19) polygon_area named argument must be an integer between 3 and 6
-20) polygon_area positional argument must be a number greater than 0
-21) Testing polygon_area for equilateral triangle, square, regular pentagon and regular hexagon
-22) temp_converter must have temp_given_in as named argument
-23) temp_converter named argument must be a string ‘f’ or ‘F’ or ‘c’ or ‘C’
-24) temp_converter positional argument must be a number greater than absolute zero temperature (0K or -273.15°C or -459.67°F)
-25) Testing temp_converter for Celsius to Fahrenheit and Fahrenheit to Celsius conversion
-26) speed_converter must have dist and time as named argument
-27) speed_converter named argument must be a string (dist can be km or m or ft or yrd and time can be ms or s or min or hr or day)
-28) speed_converter positional argument must be a number greater than 0
-29) Testing speed_converter for speed conversion
-30) squared_power_list must have start and end as named argument
-31) squared_power_list named argument must be numbers
-32) squared_power_list positional argument must be a number
-33) Testing squared_power_list for list
-34) squared_power_list start must be lesser than end
-
-lambda
-zip
-map
